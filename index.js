@@ -11,6 +11,13 @@ const changeFontSize = (event) => {
   console.log(event.target.value);
 }
 
+// Function for change Background color 
+
+const changeBgColor = (event) => {
+  console.log(event.target.value);
+}
+
 
 // add event listeners 
 selectFontSize.addEventListener("change", changeFontSize );
+selectBgColor.addEventListener("change", changeBgColor);
