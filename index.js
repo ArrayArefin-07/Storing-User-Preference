@@ -8,16 +8,27 @@ const mainElement = document.querySelector("main");
 
 // change font size function
 const changeFontSize = (event) => {
-  mainElement.style.fontSize = event.target.value;
+  const selectedFontSize = event.target.value
+  mainElement.style.fontSize = selectedFontSize;
+  localStorage.setItem("fontSize", selectedFontSize);
 }
 
 // Function for change Background color 
 
 const changeBgColor = (event) => {
-  mainElement.style.backgroundColor = event.target.value;
+  const selectedBgColor = event.target.value
+  mainElement.style.backgroundColor = selectedBgColor;
+  localStorage.setItem("bgColor", selectedBgColor);
+}
+
+// function for clear local storage 
+const cleareLocalStorage = () => {
+  localStorage.removeItem("bgColor");
+  localStorage.removeItem("fontSize");
 }
 
 
 // add event listeners 
 selectFontSize.addEventListener("change", changeFontSize );
 selectBgColor.addEventListener("change", changeBgColor);
+resetButton.addEventListener("click", cleareLocalStorage);
