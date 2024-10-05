@@ -8,13 +8,13 @@ const mainElement = document.querySelector("main");
 
 // change font size function
 const changeFontSize = (event) => {
-  console.log(event.target.value);
+  mainElement.style.fontSize = event.target.value;
 }
 
 // Function for change Background color 
 
 const changeBgColor = (event) => {
-  console.log(event.target.value);
+  mainElement.style.backgroundColor = event.target.value;
 }
 
 
